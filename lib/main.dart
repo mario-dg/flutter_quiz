@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
+import "package:flutter_quiz/start_screen.dart";
+
 void main() {
-  runApp(const Quiz());
+  runApp(MaterialApp(
+    title: "Flutter Quiz App",
+    theme: ThemeData(
+      colorScheme: const ColorScheme.dark(),
+      useMaterial3: true,
+    ),
+    home: const Quiz(),
+  ));
 }
 
 class Quiz extends StatelessWidget {
@@ -9,6 +18,6 @@ class Quiz extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const Scaffold(body: Text("Hello World"));
+    return const Scaffold(body: StartScreen());
   }
 }
